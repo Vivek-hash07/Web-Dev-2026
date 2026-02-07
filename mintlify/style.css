@@ -1,0 +1,699 @@
+/* Mintlify clone - desktop-first documentation style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #1f2937;
+    background: #fff;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* ========== 1. Top Navigation Bar (fixed on scroll) ========== */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#logo {
+    width: 115px;
+    height: 28px;
+    display: block;
+}
+
+.reference {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reference button {
+    color: #374151;
+    margin-right: 4px;
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.reference button:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+#btn-1 { width: 90px; }
+#btn-2 { width: 120px; }
+#btn-3 { width: 90px; }
+#btn-4 { width: 50px; }
+#btn-5 { width: 70px; }
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#contact-sales {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#contact-sales:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+#start-for-free {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #111827;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#start-for-free:hover {
+    background: #1f2937;
+}
+
+/* ========== 2. Hero Section ========== */
+.hero-wrap {
+    background: url('./images/Screenshot 2026-02-05 091537.png') no-repeat top center;
+    background-size: cover;
+    background-color: #99f6e4;
+    padding-top: calc(60px + 32px);
+    padding-bottom: 0;
+    position: relative;
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto 0;
+    padding: 0 24px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* NEW banner - single pill like Mintlify */
+.new-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    background: #0f766e;
+    padding: 8px 16px 8px 14px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+}
+
+.new-button:focus {
+    outline: none;
+}
+
+#new {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+#text-content {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.hero-title {
+    color: #111827;
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    color: #4b5563;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+/* Email bar - single inline unit like Mintlify */
+.email {
+    display: inline-flex;
+    align-items: stretch;
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+#email {
+    width: 280px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 0;
+    background: #fff;
+    color: #1f2937;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+#email::placeholder {
+    color: #9ca3af;
+}
+
+#start-now {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 0;
+    background: #111827;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#start-now:hover {
+    background: #1f2937;
+}
+
+/* ========== 3. Documentation Preview (overview image) ========== */
+.hero-wrap .overview-image {
+    max-width: 1000px;
+    margin: 0 auto 0;
+    padding: 0 24px 64px;
+}
+
+.hero-wrap .overview-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== 4. Trusted By / Logos ========== */
+.brand-logo {
+    max-width: 1000px;
+    margin: 48px auto 80px;
+    padding: 0 24px;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+/* ========== 5. Feature Highlights (Intelligence + two columns) ========== */
+.intelligence-section {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    padding: 0 48px;
+    background: #fff;
+}
+
+.intelligence-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.intelligence-section h5 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b7280;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-1,
+.section-2 {
+    flex: 1;
+    min-width: 320px;
+    max-width: 480px;
+    padding: 32px;
+    margin-bottom: 24px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.section-1 h6,
+.section-2 h6 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-1 h4,
+.section-2 h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.section-1 h5,
+.section-2 h5 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.section-1 img,
+.section-2 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 24px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ========== 6. Assistant Section ========== */
+.assistent {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 48px;
+    text-align: center;
+}
+
+.assistent h6 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #059669;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.assistent h4 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.assistent h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.assistent img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== 7. Enterprise Features Section ========== */
+.security {
+    background: #fff;
+    padding: 80px 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.security > h6 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #059669;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.security > h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.security > p {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 24px;
+    max-width: 560px;
+}
+
+/* Enterprise: heading row with intro + button */
+.security-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.security-header-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+#explore {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    margin-bottom: 48px;
+}
+
+#explore:hover {
+    background: #1f2937;
+}
+
+/* Two columns: Build with partnership | Compliance */
+.security-cols {
+    display: flex;
+    gap: 48px;
+    margin-top: 0;
+}
+
+.security .partnership,
+.security .compliance {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+}
+
+.security .compliance {
+    padding-left: 48px;
+    border-left: 1px solid #e5e7eb;
+}
+
+.partnership h4,
+.compliance h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.partnership h5,
+.compliance h5 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.branding {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.branding img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* ========== 9. Final CTA + Pricing/Start blocks ========== */
+.demo-section {
+    text-align: center;
+    padding: 64px 48px 80px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.demo-section h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.demo-section h2:first-of-type {
+    margin-bottom: 0;
+}
+
+.demo-section > h4 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b7280;
+    margin: 12px 0 28px;
+    line-height: 1.5;
+}
+
+.demo-section .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+
+#get-started {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#get-started:hover {
+    background: #1f2937;
+}
+
+#demo {
+    padding: 14px 28px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#demo:hover {
+    background: #f9fafb;
+}
+
+.demo-section .pricing-start-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.demo-section .pricing,
+.demo-section .start {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    margin-top: 0;
+    padding: 32px 28px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.demo-section .pricing h4,
+.demo-section .start h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.demo-section .pricing h6,
+.demo-section .start h6 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+#pricing-link,
+#quickstart-link {
+    color: #059669;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+#pricing-link:hover,
+#quickstart-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== 10. Footer ========== */
+footer {
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 48px 48px 24px;
+}
+
+footer .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+footer .top-section img {
+    width: 110px;
+    height: 28px;
+}
+
+footer .social-media {
+    width: 120px;
+    height: 24px;
+}
+
+.bottom-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 64px;
+    padding-bottom: 32px;
+}
+
+.bottom-footer .explore,
+.bottom-footer .resources,
+.bottom-footer .documentation,
+.bottom-footer .company,
+.bottom-footer .legal {
+    min-width: 120px;
+}
+
+.bottom-footer p {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.company::before {
+    content: "COMPANY";
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.bottom-footer a {
+    display: block;
+    font-size: 14px;
+    color: #4b5563;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.bottom-footer a:hover {
+    color: #059669;
+}
+
+
